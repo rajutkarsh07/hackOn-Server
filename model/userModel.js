@@ -24,6 +24,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    preference: [
+      {
+        type: string,
+      },
+    ],
     phone: {
       type: String,
       required: false,

@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const AppError = require("./utils/appError");
-const globalErrorHandler = require("./controllers/errorController");
+// const globalErrorHandler = require("./controller/errorController");
 const cors = require("cors");
 
 const cookieParser = require("cookie-parser");
@@ -49,6 +49,6 @@ app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
-app.use(globalErrorHandler);
+// app.use(globalErrorHandler);
 
 module.exports = app;
